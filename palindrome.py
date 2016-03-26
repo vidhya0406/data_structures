@@ -8,7 +8,8 @@ elif string == None:
 else:
    char_dequeue = deque()
    for char in string:
-       char_dequeue.append(char)
+       if char.isalpha():
+          char_dequeue.append(char.lower())
    check = True
    while len(char_dequeue) > 1 and  check == True:
        if char_dequeue.popleft() != char_dequeue.pop():
